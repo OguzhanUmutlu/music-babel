@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Music Library of Babel</title>
+</head>
+<body>
+<h1>Music Library of Babel</h1>
+
+<div class="containers">
+    <div class="container">
+        Every Music ID corresponds to a unique combination of notes and durations. <br><br>
+        Random combinations may be hard to listen and possibly hurt your ears. If you feel uncomfortable at any point
+        please
+        pause the music.<br><br>
+        Music ID(allows 0-9 a-z A-Z):
+        <input class="id" value="1"><br><br>
+        BPM:
+        <input class="bpm" value="60"><br>
+        <div class="run btn">Click to play</div>
+        <div class="pause btn">Pause</div>
+        <div class="resume btn">Resume</div>
+        <div class="randomize btn">Randomize</div>
+        <br>
+        <div class="length"></div>
+        <br>
+        <div class="notes"></div>
+    </div>
+    <div class="container">
+        Find any music:
+        <div class="from-notes">
+        </div>
+        <br>
+        Converted to Music ID:
+        <input class="to-id" readonly>
+        <br>
+        <div class="length"></div>
+        <br>
+        <div class="notes"></div>
+    </div>
+</div>
+</body>
+<script src="https://unpkg.com/bignumber.js"></script>
+<script src="./script.js"></script>
+<style>
+    body {
+        background: #36393F;
+        color: white;
+        font-family: Calibri, serif;
+        text-align: center;
+    }
+
+    input, textarea {
+        resize: none;
+        background: #36393F;
+        color: white;
+        outline: none;
+        border: 1px solid white;
+        border-radius: 5px;
+        padding: 5px;
+        max-width: 95%;
+    }
+
+    .btn {
+        cursor: pointer;
+        padding: 5px;
+        margin-top: 20px;
+        border-radius: 5px;
+        border: 1px solid white;
+        width: max-content;
+        align-self: center;
+    }
+
+    .containers {
+        display: flex;
+    }
+
+    .container {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .note {
+        margin-top: 10px;
+    }
+
+    .note > span {
+        padding: 3px;
+        border: 1px solid white;
+        margin-left: 10px;
+        cursor: pointer;
+    }
+</style>
+</html>

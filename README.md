@@ -1,2 +1,2 @@
-# music-babel
-A web site that includes every possible music
+# Music Library of Babel
+A website that includes every possible music
