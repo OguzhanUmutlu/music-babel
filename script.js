@@ -194,7 +194,7 @@ let stopper;
 let paused = false;
 
 function onChange() {
-    const noteIds = decodeNotes(BigNumber(id.value));
+    const noteIds = decodeNotes(BigNumber(id.value.replaceAll(/[^0-9]/g, "") || 0));
     notes = noteIds.map(i => decodeNote(i));
     const beats = notes.map(note => Durations[note.duration]).reduce((a, b) => a + b, 0);
     lengthDiv.textContent = "Note count: " + notes.length + ", beats: " + beats + ", duration: " + (beats * 60 / bpm.value) + " seconds";
